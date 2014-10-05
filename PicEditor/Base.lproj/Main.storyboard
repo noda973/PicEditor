@@ -29,14 +29,27 @@
                                     <action selector="pickButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xvg-GX-a6p"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upu-5I-z5q">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Take Pic">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cameraButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7Vq-RZ-PRV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="cMF-ud-qBZ" secondAttribute="centerX" id="B9f-KX-yAO"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cMF-ud-qBZ" secondAttribute="bottom" constant="36" id="CvX-FT-gcI"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="DsN-BD-CJZ" secondAttribute="bottom" constant="217" id="EnG-QF-QRf">
                                 <variation key="heightClass=regular-widthClass=compact" constant="100"/>
                             </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="upu-5I-z5q" secondAttribute="trailing" constant="53" id="PkQ-oM-g4q">
+                                <variation key="heightClass=regular-widthClass=compact" constant="73"/>
+                            </constraint>
+                            <constraint firstItem="cMF-ud-qBZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="73" id="XVT-VE-IeD"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="upu-5I-z5q" secondAttribute="bottom" constant="36" id="rUB-v2-Lad"/>
                             <constraint firstItem="DsN-BD-CJZ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="67" id="uuv-iA-jPY">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
@@ -51,28 +64,34 @@
                             <mask key="subviews">
                                 <exclude reference="DsN-BD-CJZ"/>
                                 <exclude reference="cMF-ud-qBZ"/>
+                                <exclude reference="upu-5I-z5q"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="uuv-iA-jPY"/>
                                 <exclude reference="vLG-Nk-0hp"/>
                                 <exclude reference="w1X-oR-Wdn"/>
-                                <exclude reference="B9f-KX-yAO"/>
+                                <exclude reference="XVT-VE-IeD"/>
+                                <exclude reference="PkQ-oM-g4q"/>
                                 <exclude reference="CvX-FT-gcI"/>
                                 <exclude reference="EnG-QF-QRf"/>
+                                <exclude reference="rUB-v2-Lad"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="DsN-BD-CJZ"/>
                                 <include reference="cMF-ud-qBZ"/>
+                                <include reference="upu-5I-z5q"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="uuv-iA-jPY"/>
                                 <include reference="vLG-Nk-0hp"/>
                                 <include reference="w1X-oR-Wdn"/>
-                                <include reference="B9f-KX-yAO"/>
+                                <include reference="XVT-VE-IeD"/>
+                                <include reference="PkQ-oM-g4q"/>
                                 <include reference="CvX-FT-gcI"/>
                                 <include reference="EnG-QF-QRf"/>
+                                <include reference="rUB-v2-Lad"/>
                             </mask>
                         </variation>
                     </view>

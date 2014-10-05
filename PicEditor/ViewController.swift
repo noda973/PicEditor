@@ -24,6 +24,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
+    
+
+    @IBAction func cameraButton(sender: UIButton) {
+        picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = false;
+        picker.sourceType = UIImagePickerControllerSourceType.Camera
+        self.presentViewController(picker, animated: true, completion: nil)
+    
+
+    }
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         var chosenImage: UIImage!
         println(editingInfo)
