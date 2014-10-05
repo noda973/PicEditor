@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,18 +17,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="herro" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzP-Ey-F8H">
-                                <rect key="frame" x="279" y="205" width="40" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DsN-BD-CJZ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMF-ud-qBZ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Select Pic">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pickButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xvg-GX-a6p"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="cMF-ud-qBZ" secondAttribute="centerX" id="B9f-KX-yAO"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cMF-ud-qBZ" secondAttribute="bottom" constant="36" id="CvX-FT-gcI"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="DsN-BD-CJZ" secondAttribute="bottom" constant="217" id="EnG-QF-QRf">
+                                <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                            </constraint>
+                            <constraint firstItem="DsN-BD-CJZ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="67" id="uuv-iA-jPY">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="DsN-BD-CJZ" secondAttribute="trailing" constant="62" id="vLG-Nk-0hp">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="DsN-BD-CJZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="62" id="w1X-oR-Wdn">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="DsN-BD-CJZ"/>
+                                <exclude reference="cMF-ud-qBZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="uuv-iA-jPY"/>
+                                <exclude reference="vLG-Nk-0hp"/>
+                                <exclude reference="w1X-oR-Wdn"/>
+                                <exclude reference="B9f-KX-yAO"/>
+                                <exclude reference="CvX-FT-gcI"/>
+                                <exclude reference="EnG-QF-QRf"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="DsN-BD-CJZ"/>
+                                <include reference="cMF-ud-qBZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="uuv-iA-jPY"/>
+                                <include reference="vLG-Nk-0hp"/>
+                                <include reference="w1X-oR-Wdn"/>
+                                <include reference="B9f-KX-yAO"/>
+                                <include reference="CvX-FT-gcI"/>
+                                <include reference="EnG-QF-QRf"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="DsN-BD-CJZ" id="SCJ-vl-wgg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="439.5" y="360"/>
         </scene>
     </scenes>
 </document>

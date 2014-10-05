@@ -7,9 +7,35 @@
 //
 
 import UIKit
+import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    var picker: UIImagePickerController!
 
+    @IBOutlet var imageView: UIImageView!
+    
+    @IBAction func pickButton(sender: UIButton) {
+        picker = UIImagePickerController()
+        picker.delegate = self;
+        picker.allowsEditing = false
+        picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        self.presentViewController(picker, animated: true, completion: nil)
+        
+        
+    }
+    
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        var chosenImage: UIImage!
+        println(editingInfo)
+        println(image)
+        chosenImage = image
+        self.imageView.image = chosenImage
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
