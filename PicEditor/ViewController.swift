@@ -90,6 +90,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func pinched(sender:UIPinchGestureRecognizer) {
         sender.view!.transform = CGAffineTransformScale(sender.view!.transform, sender.scale, sender.scale)
+        sender.scale = 1
         println(sender.scale)
     }
 
