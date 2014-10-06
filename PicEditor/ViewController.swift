@@ -12,6 +12,7 @@ import AVFoundation
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var picker: UIImagePickerController!
     var pan: UIPanGestureRecognizer!
+    var pinch: UIPinchGestureRecognizer!
 
     @IBOutlet var imageView: UIImageView!
     
@@ -57,6 +58,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         self.pan = UIPanGestureRecognizer()
+        self.pinch = UIPinchGestureRecognizer()
         setupGesture()
         self.dogeView.hidden = true
         let dogeImg = UIImage(named: "doge.png")
@@ -73,6 +75,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func setupGesture() {
         println("yes")
         self.dogeView.addGestureRecognizer(self.pan)
+        self.dogeView.addGestureRecognizer(self.pinch)
+        self.pinch.addTarget(self, action:"pinched:")
         self.pan.addTarget(self, action:"panned:")
         
     }
@@ -83,6 +87,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         sender.setTranslation(CGPointZero, inView: self.view)
         
     }
+    
+    func pinched(sender:UIPinchGestureRecognizer) {
+        sender.view!.transform = CGAffineTransformScale(sender.view!.transform, sender.scale, sender.scale)
+        println(sender.scale)
+    }
+
 
 }
 
