@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -64,7 +64,7 @@
                                 <fontDescription key="fontDescription" name="ComicSansMS" family="Comic Sans MS" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="120" y="448" width="161" height="30"/>
+                                    <rect key="frame" x="120" y="448" width="161" height="17"/>
                                 </variation>
                             </textField>
                         </subviews>
@@ -104,19 +104,19 @@
                                 <exclude reference="CWK-79-8vn"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="uuv-iA-jPY"/>
-                                <exclude reference="vLG-Nk-0hp"/>
-                                <exclude reference="w1X-oR-Wdn"/>
-                                <exclude reference="Llg-Pl-c18"/>
-                                <exclude reference="XDT-t2-TwH"/>
-                                <exclude reference="tOk-Na-vsn"/>
-                                <exclude reference="XVT-VE-IeD"/>
-                                <exclude reference="hhf-YP-mcR"/>
-                                <exclude reference="PkQ-oM-g4q"/>
                                 <exclude reference="CvX-FT-gcI"/>
                                 <exclude reference="EnG-QF-QRf"/>
                                 <exclude reference="rUB-v2-Lad"/>
                                 <exclude reference="tKu-A2-ItG"/>
+                                <exclude reference="Llg-Pl-c18"/>
+                                <exclude reference="XDT-t2-TwH"/>
+                                <exclude reference="tOk-Na-vsn"/>
+                                <exclude reference="hhf-YP-mcR"/>
+                                <exclude reference="XVT-VE-IeD"/>
+                                <exclude reference="PkQ-oM-g4q"/>
+                                <exclude reference="uuv-iA-jPY"/>
+                                <exclude reference="vLG-Nk-0hp"/>
+                                <exclude reference="w1X-oR-Wdn"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -129,19 +129,19 @@
                                 <include reference="CWK-79-8vn"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="uuv-iA-jPY"/>
-                                <include reference="vLG-Nk-0hp"/>
-                                <include reference="w1X-oR-Wdn"/>
-                                <include reference="Llg-Pl-c18"/>
-                                <include reference="XDT-t2-TwH"/>
-                                <include reference="tOk-Na-vsn"/>
-                                <include reference="XVT-VE-IeD"/>
-                                <include reference="hhf-YP-mcR"/>
-                                <include reference="PkQ-oM-g4q"/>
                                 <include reference="CvX-FT-gcI"/>
                                 <include reference="EnG-QF-QRf"/>
                                 <include reference="rUB-v2-Lad"/>
                                 <include reference="tKu-A2-ItG"/>
+                                <include reference="Llg-Pl-c18"/>
+                                <include reference="XDT-t2-TwH"/>
+                                <include reference="tOk-Na-vsn"/>
+                                <include reference="hhf-YP-mcR"/>
+                                <include reference="XVT-VE-IeD"/>
+                                <include reference="PkQ-oM-g4q"/>
+                                <include reference="uuv-iA-jPY"/>
+                                <include reference="vLG-Nk-0hp"/>
+                                <include reference="w1X-oR-Wdn"/>
                             </mask>
                         </variation>
                     </view>

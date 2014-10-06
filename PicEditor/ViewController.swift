@@ -11,7 +11,8 @@ import AVFoundation
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     var picker: UIImagePickerController!
-    var pan: UIPanGestureRecognizer!
+    var pan_text: UIPanGestureRecognizer!
+    var pan_doge: UIPanGestureRecognizer!
     var pinch: UIPinchGestureRecognizer!
 
     @IBOutlet var imageView: UIImageView!
@@ -76,7 +77,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.pan = UIPanGestureRecognizer()
+        self.pan_text = UIPanGestureRecognizer()
+        self.pan_doge = UIPanGestureRecognizer()
         self.pinch = UIPinchGestureRecognizer()
         setupGesture()
         self.dogeView.hidden = true
@@ -93,15 +95,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func setupGesture() {
         println("yes")
-        self.dogeView.addGestureRecognizer(self.pan)
+        self.dogeView.addGestureRecognizer(self.pan_doge)
         self.dogeView.addGestureRecognizer(self.pinch)
         self.pinch.addTarget(self, action:"pinched:")
-        self.pan.addTarget(self, action:"panned:")
-        self.text.addGestureRecognizer(self.pan)
+        self.pan_text.addTarget(self, action:"panned:")
+        self.pan_doge.addTarget(self, action:"panned:")
+        self.text.addGestureRecognizer(self.pan_text)
         
     }
     func panned(sender:UIPanGestureRecognizer) {
         println("panned")
+        println(sender)
         var translation = sender.translationInView(self.view)
         sender.view!.center = CGPointMake(sender.view!.center.x + translation.x, sender.view!.center.y + translation.y)
         sender.setTranslation(CGPointZero, inView: self.view)
