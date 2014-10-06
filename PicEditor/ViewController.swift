@@ -20,7 +20,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         picker.allowsEditing = false
         picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         self.presentViewController(picker, animated: true, completion: nil)
-        
+        println("pen15")
         
     }
     
