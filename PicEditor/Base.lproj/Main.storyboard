@@ -38,6 +38,21 @@
                                     <action selector="cameraButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7Vq-RZ-PRV"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TDl-wu-AeY">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="192" y="104" width="91" height="95"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAs-TP-yfh">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="+">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addDoge:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lzE-SB-Obj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -49,7 +64,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" constant="73"/>
                             </constraint>
                             <constraint firstItem="cMF-ud-qBZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="73" id="XVT-VE-IeD"/>
+                            <constraint firstItem="ZAs-TP-yfh" firstAttribute="leading" secondItem="cMF-ud-qBZ" secondAttribute="trailing" constant="27" id="hhf-YP-mcR"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="upu-5I-z5q" secondAttribute="bottom" constant="36" id="rUB-v2-Lad"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ZAs-TP-yfh" secondAttribute="bottom" constant="36" id="tKu-A2-ItG"/>
                             <constraint firstItem="DsN-BD-CJZ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="67" id="uuv-iA-jPY">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
@@ -65,16 +82,20 @@
                                 <exclude reference="DsN-BD-CJZ"/>
                                 <exclude reference="cMF-ud-qBZ"/>
                                 <exclude reference="upu-5I-z5q"/>
+                                <exclude reference="TDl-wu-AeY"/>
+                                <exclude reference="ZAs-TP-yfh"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="uuv-iA-jPY"/>
                                 <exclude reference="vLG-Nk-0hp"/>
                                 <exclude reference="w1X-oR-Wdn"/>
                                 <exclude reference="XVT-VE-IeD"/>
+                                <exclude reference="hhf-YP-mcR"/>
                                 <exclude reference="PkQ-oM-g4q"/>
                                 <exclude reference="CvX-FT-gcI"/>
                                 <exclude reference="EnG-QF-QRf"/>
                                 <exclude reference="rUB-v2-Lad"/>
+                                <exclude reference="tKu-A2-ItG"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -82,20 +103,25 @@
                                 <include reference="DsN-BD-CJZ"/>
                                 <include reference="cMF-ud-qBZ"/>
                                 <include reference="upu-5I-z5q"/>
+                                <include reference="TDl-wu-AeY"/>
+                                <include reference="ZAs-TP-yfh"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="uuv-iA-jPY"/>
                                 <include reference="vLG-Nk-0hp"/>
                                 <include reference="w1X-oR-Wdn"/>
                                 <include reference="XVT-VE-IeD"/>
+                                <include reference="hhf-YP-mcR"/>
                                 <include reference="PkQ-oM-g4q"/>
                                 <include reference="CvX-FT-gcI"/>
                                 <include reference="EnG-QF-QRf"/>
                                 <include reference="rUB-v2-Lad"/>
+                                <include reference="tKu-A2-ItG"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="dogeView" destination="TDl-wu-AeY" id="LWb-SF-wNv"/>
                         <outlet property="imageView" destination="DsN-BD-CJZ" id="SCJ-vl-wgg"/>
                     </connections>
                 </viewController>

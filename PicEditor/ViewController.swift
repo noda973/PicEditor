@@ -11,9 +11,11 @@ import AVFoundation
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var picker: UIImagePickerController!
+    var pan: UIPanGestureRecognizer!
 
     @IBOutlet var imageView: UIImageView!
     
+    @IBOutlet var dogeView: UIImageView!
     @IBAction func pickButton(sender: UIButton) {
         picker = UIImagePickerController()
         picker.delegate = self;
@@ -26,6 +28,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
 
+    @IBAction func addDoge(sender: UIButton) {
+        self.dogeView.hidden = false
+        
+    }
     @IBAction func cameraButton(sender: UIButton) {
         picker = UIImagePickerController()
         picker.delegate = self
@@ -49,14 +55,31 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.pan = UIPanGestureRecognizer()
+        setupGesture()
+        self.dogeView.hidden = true
+        let dogeImg = UIImage(named: "doge.png")
+        self.dogeView.image = dogeImg
+        self.dogeView.sizeToFit()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // Dispose of any resources that can be recrea\ted.
     }
-
+    
+    func setupGesture() {
+        self.dogeView.addGestureRecognizer(self.pan)
+        self.pan.addTarget(self, action:"panned:")
+        
+    }
+    func panned(sender:UIPanGestureRecognizer) {
+        var translation = sender.translationInView(self.view)
+        sender.view!.center = CGPointMake(sender.view!.center.x + translation.x, sender.view!.center.y + translation.y)
+        sender.setTranslation(CGPointZero, inView: self.view)
+        
+    }
 
 }
 

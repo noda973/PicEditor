@@ -13,6 +13,7 @@
 		DA7F2C6519E1EC8F00EDBDF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7F2C6419E1EC8F00EDBDF2 /* Images.xcassets */; };
 		DA7F2C6819E1EC8F00EDBDF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA7F2C6619E1EC8F00EDBDF2 /* LaunchScreen.xib */; };
 		DA7F2C7419E1EC8F00EDBDF2 /* PicEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F2C7319E1EC8F00EDBDF2 /* PicEditorTests.swift */; };
+		DA7F2C8019E2238200EDBDF2 /* doge.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7F2C7F19E2238200EDBDF2 /* doge.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		DA7F2C6D19E1EC8F00EDBDF2 /* PicEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA7F2C7219E1EC8F00EDBDF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA7F2C7319E1EC8F00EDBDF2 /* PicEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicEditorTests.swift; sourceTree = "<group>"; };
+		DA7F2C7F19E2238200EDBDF2 /* doge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = doge.png; path = ../../../Desktop/doge.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		DA7F2C5A19E1EC8F00EDBDF2 /* PicEditor */ = {
 			isa = PBXGroup;
 			children = (
+				DA7F2C7F19E2238200EDBDF2 /* doge.png */,
 				DA7F2C5D19E1EC8F00EDBDF2 /* AppDelegate.swift */,
 				DA7F2C5F19E1EC8F00EDBDF2 /* ViewController.swift */,
 				DA7F2C6119E1EC8F00EDBDF2 /* Main.storyboard */,
@@ -194,6 +197,7 @@
 			files = (
 				DA7F2C6319E1EC8F00EDBDF2 /* Main.storyboard in Resources */,
 				DA7F2C6819E1EC8F00EDBDF2 /* LaunchScreen.xib in Resources */,
+				DA7F2C8019E2238200EDBDF2 /* doge.png in Resources */,
 				DA7F2C6519E1EC8F00EDBDF2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
