@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     var picker: UIImagePickerController!
     var pan: UIPanGestureRecognizer!
     var pinch: UIPinchGestureRecognizer!
@@ -43,6 +43,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
 
     }
+    
+    @IBOutlet weak var text: UITextField!
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        //exits text field when pressing return on keyboard
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+    }
+    
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         var chosenImage: UIImage!
         println(editingInfo)
@@ -78,6 +92,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.dogeView.addGestureRecognizer(self.pinch)
         self.pinch.addTarget(self, action:"pinched:")
         self.pan.addTarget(self, action:"panned:")
+        self.text.addGestureRecognizer(self.pan)
         
     }
     func panned(sender:UIPanGestureRecognizer) {
