@@ -30,6 +30,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     @IBAction func addDoge(sender: UIButton) {
         self.dogeView.hidden = false
+        self.dogeView.userInteractionEnabled = true
         
     }
     @IBAction func cameraButton(sender: UIButton) {
@@ -70,11 +71,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func setupGesture() {
+        println("yes")
         self.dogeView.addGestureRecognizer(self.pan)
         self.pan.addTarget(self, action:"panned:")
         
     }
     func panned(sender:UIPanGestureRecognizer) {
+        println("panned")
         var translation = sender.translationInView(self.view)
         sender.view!.center = CGPointMake(sender.view!.center.x + translation.x, sender.view!.center.y + translation.y)
         sender.setTranslation(CGPointZero, inView: self.view)
