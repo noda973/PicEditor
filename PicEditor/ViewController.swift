@@ -21,6 +21,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         self.presentViewController(picker, animated: true, completion: nil)
         println("pen15")
+        println("b00bs")
         
     }
     
