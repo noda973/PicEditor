@@ -54,7 +54,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        self.view.endEditing(true)
+        if (self.text.editing == true) {
+            let colorArray : [UIColor] = [UIColor.blueColor(), UIColor.greenColor(), UIColor.redColor(), UIColor.yellowColor()]
+            var colorIndex : Int = Int(arc4random_uniform(4))
+            self.text.textColor = colorArray[colorIndex]
+            self.view.endEditing(true)
+        }
     }
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
