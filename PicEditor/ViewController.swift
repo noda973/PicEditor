@@ -84,7 +84,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.dogeView.hidden = true
         let dogeImg = UIImage(named: "doge.png")
         self.dogeView.image = dogeImg
-        self.dogeView.sizeToFit()
+        //self.dogeView.sizeToFit()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
