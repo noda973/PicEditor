@@ -69,6 +69,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         println(image)
         chosenImage = image
         self.imageView.image = chosenImage
+        self.imageView.sizeToFit()
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
     

@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -25,6 +26,19 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DsN-BD-CJZ">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DsN-BD-CJZ" secondAttribute="height" multiplier="3:4" id="kvB-aa-s8j"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="kvB-aa-s8j"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="kvB-aa-s8j"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMF-ud-qBZ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -53,14 +67,6 @@
                                     <action selector="addDoge:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lzE-SB-Obj"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter text here..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CWK-79-8vn">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" name="ComicSansMS" family="Comic Sans MS" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="120" y="448" width="161" height="17"/>
-                                </variation>
-                            </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TDl-wu-AeY">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
@@ -84,25 +90,32 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter text here..." textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="CWK-79-8vn">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" name="ComicSansMS" family="Comic Sans MS" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="43" y="418" width="315" height="51"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cMF-ud-qBZ" secondAttribute="bottom" constant="36" id="CvX-FT-gcI"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="DsN-BD-CJZ" secondAttribute="bottom" constant="217" id="EnG-QF-QRf">
-                                <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="200"/>
                             </constraint>
                             <constraint firstAttribute="centerX" secondItem="TDl-wu-AeY" secondAttribute="centerX" id="IE5-yD-6LJ"/>
-                            <constraint firstItem="CWK-79-8vn" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="428" id="Llg-Pl-c18"/>
                             <constraint firstAttribute="trailingMargin" secondItem="upu-5I-z5q" secondAttribute="trailing" constant="53" id="PkQ-oM-g4q">
                                 <variation key="heightClass=regular-widthClass=compact" constant="73"/>
                             </constraint>
-                            <constraint firstAttribute="trailingMargin" secondItem="CWK-79-8vn" secondAttribute="trailing" constant="103" id="XDT-t2-TwH"/>
                             <constraint firstItem="cMF-ud-qBZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="73" id="XVT-VE-IeD"/>
                             <constraint firstItem="TDl-wu-AeY" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="90" id="bhu-4b-iQn"/>
+                            <constraint firstItem="CWK-79-8vn" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="398" id="ffa-9V-y8a"/>
                             <constraint firstItem="ZAs-TP-yfh" firstAttribute="leading" secondItem="cMF-ud-qBZ" secondAttribute="trailing" constant="27" id="hhf-YP-mcR"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="upu-5I-z5q" secondAttribute="bottom" constant="36" id="rUB-v2-Lad"/>
+                            <constraint firstAttribute="centerX" secondItem="CWK-79-8vn" secondAttribute="centerX" constant="-0.5" id="sor-GR-6D4"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ZAs-TP-yfh" secondAttribute="bottom" constant="36" id="tKu-A2-ItG"/>
-                            <constraint firstItem="CWK-79-8vn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="104" id="tOk-Na-vsn"/>
                             <constraint firstItem="DsN-BD-CJZ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="67" id="uuv-iA-jPY">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
@@ -119,8 +132,8 @@
                                 <exclude reference="cMF-ud-qBZ"/>
                                 <exclude reference="upu-5I-z5q"/>
                                 <exclude reference="ZAs-TP-yfh"/>
-                                <exclude reference="CWK-79-8vn"/>
                                 <exclude reference="TDl-wu-AeY"/>
+                                <exclude reference="CWK-79-8vn"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="uuv-iA-jPY"/>
@@ -128,9 +141,8 @@
                                 <exclude reference="w1X-oR-Wdn"/>
                                 <exclude reference="IE5-yD-6LJ"/>
                                 <exclude reference="bhu-4b-iQn"/>
-                                <exclude reference="Llg-Pl-c18"/>
-                                <exclude reference="XDT-t2-TwH"/>
-                                <exclude reference="tOk-Na-vsn"/>
+                                <exclude reference="ffa-9V-y8a"/>
+                                <exclude reference="sor-GR-6D4"/>
                                 <exclude reference="XVT-VE-IeD"/>
                                 <exclude reference="hhf-YP-mcR"/>
                                 <exclude reference="PkQ-oM-g4q"/>
@@ -146,8 +158,8 @@
                                 <include reference="cMF-ud-qBZ"/>
                                 <include reference="upu-5I-z5q"/>
                                 <include reference="ZAs-TP-yfh"/>
-                                <include reference="CWK-79-8vn"/>
                                 <include reference="TDl-wu-AeY"/>
+                                <include reference="CWK-79-8vn"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="uuv-iA-jPY"/>
@@ -155,14 +167,13 @@
                                 <include reference="w1X-oR-Wdn"/>
                                 <include reference="IE5-yD-6LJ"/>
                                 <include reference="bhu-4b-iQn"/>
-                                <include reference="Llg-Pl-c18"/>
-                                <include reference="XDT-t2-TwH"/>
-                                <include reference="tOk-Na-vsn"/>
+                                <include reference="ffa-9V-y8a"/>
+                                <include reference="sor-GR-6D4"/>
                                 <include reference="XVT-VE-IeD"/>
                                 <include reference="hhf-YP-mcR"/>
                                 <include reference="PkQ-oM-g4q"/>
                                 <include reference="CvX-FT-gcI"/>
-                                <include reference="EnG-QF-QRf"/>
+                                <exclude reference="EnG-QF-QRf"/>
                                 <include reference="rUB-v2-Lad"/>
                                 <include reference="tKu-A2-ItG"/>
                             </mask>
