@@ -13,7 +13,7 @@
 		DA7F2C6519E1EC8F00EDBDF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7F2C6419E1EC8F00EDBDF2 /* Images.xcassets */; };
 		DA7F2C6819E1EC8F00EDBDF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA7F2C6619E1EC8F00EDBDF2 /* LaunchScreen.xib */; };
 		DA7F2C7419E1EC8F00EDBDF2 /* PicEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F2C7319E1EC8F00EDBDF2 /* PicEditorTests.swift */; };
-		DA7F2C8219E2276400EDBDF2 /* doge.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7F2C8119E2276400EDBDF2 /* doge.png */; };
+		E761710A19E24CFF000CCBD1 /* doge.png in Resources */ = {isa = PBXBuildFile; fileRef = E761710919E24CFF000CCBD1 /* doge.png */; };
 		E7E88E2B19E2304C00776FD0 /* Comic Sans MS.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7E88E2A19E2304C00776FD0 /* Comic Sans MS.ttf */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +38,7 @@
 		DA7F2C6D19E1EC8F00EDBDF2 /* PicEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA7F2C7219E1EC8F00EDBDF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA7F2C7319E1EC8F00EDBDF2 /* PicEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicEditorTests.swift; sourceTree = "<group>"; };
-		DA7F2C8119E2276400EDBDF2 /* doge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doge.png; sourceTree = "<group>"; };
+		E761710919E24CFF000CCBD1 /* doge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doge.png; sourceTree = "<group>"; };
 		E7E88E2A19E2304C00776FD0 /* Comic Sans MS.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comic Sans MS.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				E7E88E2A19E2304C00776FD0 /* Comic Sans MS.ttf */,
-				DA7F2C8119E2276400EDBDF2 /* doge.png */,
+				E761710919E24CFF000CCBD1 /* doge.png */,
 				DA7F2C5D19E1EC8F00EDBDF2 /* AppDelegate.swift */,
 				DA7F2C5F19E1EC8F00EDBDF2 /* ViewController.swift */,
 				DA7F2C6119E1EC8F00EDBDF2 /* Main.storyboard */,
@@ -199,9 +199,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA7F2C6319E1EC8F00EDBDF2 /* Main.storyboard in Resources */,
+				E761710A19E24CFF000CCBD1 /* doge.png in Resources */,
 				E7E88E2B19E2304C00776FD0 /* Comic Sans MS.ttf in Resources */,
 				DA7F2C6819E1EC8F00EDBDF2 /* LaunchScreen.xib in Resources */,
-				DA7F2C8219E2276400EDBDF2 /* doge.png in Resources */,
 				DA7F2C6519E1EC8F00EDBDF2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
